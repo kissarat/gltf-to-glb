@@ -1,7 +1,7 @@
 {
   "name": "asset-pack",
   "version": "0.0.1",
-  "description": "",
+  "description": "CLI tool for packing various assets effeciently for use in production.",
   "main": "index.js",
   "scripts": {
     "start": "http-server --cors -s -o",
