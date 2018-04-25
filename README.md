@@ -5,7 +5,7 @@
 
 CLI tool for packing various assets efficiently for use in production.
 
-Initially focused on setting up a proper `glTF` to `glb` workflow including `Draco` compression and texture compression using `texture-compressor`. Later will be expanded to effectively handle pack
+Initially focused on setting up a proper `glTF` to `glb` workflow including `Draco` compression and texture compression using `texture-compressor`. `Asset-pipeline` will hopefully be a toolkit that can help you with packing all kinds of data effectively for use in production environments.
 
 ## Installation
 
