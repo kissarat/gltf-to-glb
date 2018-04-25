@@ -1,0 +1,33 @@
+{
+  "name": "asset-pipeline",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server --cors -s -o",
+    "lint": "eslint lib/**/*.js",
+    "deploy": "npm version patch && npm publish && git push origin"
+  },
+  "bin": {
+    "asset-pipeline": "./bin/asset-pipeline.js"
+  },
+  "author": "Tim van Scherpenzeel",
+  "license": "MIT",
+  "dependencies": {
+    "argparse": "^1.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "http-server": "^0.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimvanScherpenzeel/asset-pipeline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TimvanScherpenzeel/asset-pipeline/issues"
+  },
+  "homepage": "https://github.com/TimvanScherpenzeel/asset-pipeline#readme"
+}
