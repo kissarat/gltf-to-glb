@@ -1,5 +1,5 @@
 {
-  "name": "asset-pipeline",
+  "name": "asset-pack",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "deploy": "npm version patch && npm publish && git push origin"
   },
   "bin": {
-    "asset-pipeline": "./bin/asset-pipeline.js"
+    "asset-pack": "./bin/asset-pack.js"
   },
   "author": "Tim van Scherpenzeel",
   "license": "MIT",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TimvanScherpenzeel/asset-pipeline.git"
+    "url": "git+https://github.com/TimvanScherpenzeel/asset-pack.git"
   },
   "bugs": {
-    "url": "https://github.com/TimvanScherpenzeel/asset-pipeline/issues"
+    "url": "https://github.com/TimvanScherpenzeel/asset-pack/issues"
   },
-  "homepage": "https://github.com/TimvanScherpenzeel/asset-pipeline#readme"
+  "homepage": "https://github.com/TimvanScherpenzeel/asset-pack#readme"
 }
