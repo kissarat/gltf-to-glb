@@ -5,3 +5,6 @@
 	path = submodules/gltf-pipeline
 	url = https://github.com/FrankGalligan/gltf-pipeline.git
 	branch = add_draco_mesh_compression
+[submodule "submodules/texture-compressor"]
+	path = submodules/texture-compressor
+	url = git@github.com:TimvanScherpenzeel/texture-compressor.git
