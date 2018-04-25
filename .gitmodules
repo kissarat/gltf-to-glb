@@ -1,4 +1,7 @@
+[submodule "submodules/glTF-Sample-Models"]
+	path = submodules/glTF-Sample-Models
+	url = git@github.com:KhronosGroup/glTF-Sample-Models.git
 [submodule "submodules/gltf-pipeline"]
 	path = submodules/gltf-pipeline
-	url = git@github.com:FrankGalligan/gltf-pipeline.git
+	url = https://github.com/FrankGalligan/gltf-pipeline.git
 	branch = add_draco_mesh_compression
