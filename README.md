@@ -3,7 +3,7 @@
 [![dependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline)
 [![devDependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline#info=devDependencies)
 
-CLI tool for packing various assets effeciently for use in production.
+CLI tool for packing various assets efficiently for use in production.
 
 Initially focused on setting up a proper `glTF` to `glb` workflow including `Draco` compression and texture compression using `texture-compressor`. Later will be expanded to effectively handle pack
 
