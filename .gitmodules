@@ -1,0 +1,4 @@
+[submodule "submodules/gltf-pipeline"]
+	path = submodules/gltf-pipeline
+	url = git@github.com:FrankGalligan/gltf-pipeline.git
+	branch = add_draco_mesh_compression
