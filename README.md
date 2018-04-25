@@ -1,12 +1,12 @@
-# Asset pack
+# Asset pipeline
 
-[![npm version](https://badge.fury.io/js/texture-compressor.svg)](https://badge.fury.io/js/texture-compressor)
-[![dependencies](https://david-dm.org/timvanscherpenzeel/texture-compressor.svg)](https://david-dm.org/timvanscherpenzeel/texture-compressor)
-[![devDependencies](https://david-dm.org/timvanscherpenzeel/texture-compressor/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/texture-compressor#info=devDependencies)
+[![npm version](https://badge.fury.io/js/asset-pipeline.svg)](https://badge.fury.io/js/asset-pipeline)
+[![dependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline)
+[![devDependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline#info=devDependencies)
 
 CLI tool for packing various assets effeciently for use in production.
 
-Initially focused on `glTF` to `glb` workflow including `Draco` compression and texture compression using `texture-compressor`.
+Initially focused on setting up a proper `glTF` to `glb` workflow including `Draco` compression and texture compression using `texture-compressor`. Later will be expanded to effectively handle pack
 
 ## Installation
 
@@ -31,4 +31,4 @@ $ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelme
 
 ## Licence
 
-My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/asset-pack/master/LICENSE).
+My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/asset-pipeline/master/LICENSE).
