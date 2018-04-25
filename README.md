@@ -1,6 +1,5 @@
 # Asset pipeline
 
-[![npm version](https://badge.fury.io/js/asset-pipeline.svg)](https://badge.fury.io/js/asset-pipeline)
 [![dependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline)
 [![devDependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline#info=devDependencies)
 
