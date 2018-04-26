@@ -19,6 +19,10 @@ $ npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
 $ npm --prefix ./submodules/texture-compressor install ./submodules/texture-compressor
 ```
 
+## Live demo
+
+[Live demo](https://timvanscherpenzeel.github.io/asset-pipeline/)
+
 ## Example
 
 ```sh
