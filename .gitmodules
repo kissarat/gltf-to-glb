@@ -8,3 +8,4 @@
 	path = submodules/gltf-pipeline
 	url = git@github.com:AnalyticalGraphicsInc/gltf-pipeline.git
 	branch = 2.0
+	ignore = dirty
