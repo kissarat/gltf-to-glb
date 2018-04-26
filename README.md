@@ -10,6 +10,7 @@ Initially focused on setting up a proper `glTF` to `glb` workflow including `Dra
 ## Installation
 
 ```sh
+$ npm install
 $ git submodule init
 $ git submodule update
 $ npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
@@ -19,7 +20,7 @@ $ npm --prefix ./submodules/texture-compressor install ./submodules/texture-comp
 ## Example
 
 ```sh
-$ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/example.glb
+$ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./docs/models/example.glb
 ```
 
 ## Flags
