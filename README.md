@@ -28,6 +28,10 @@ $ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelme
 	-i, --input [example: ./input/example.gltf] [required]
 	-o, --output [example: ./output/example.glb] [required]
 
+## Resources
+
+- [Prepack](https://github.com/facebook/prepack) is a partial evaluator for JavaScript. Prepack rewrites a JavaScript bundle, resulting in JavaScript code that executes more efficiently.
+
 ## Licence
 
 My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/asset-pipeline/master/LICENSE).
