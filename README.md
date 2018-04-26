@@ -26,7 +26,7 @@ $ npm --prefix ./submodules/texture-compressor install ./submodules/texture-comp
 ## Example
 
 ```sh
-$ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./docs/models/example.glb
+$ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
 ```
 
 ## Flags
