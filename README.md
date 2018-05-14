@@ -30,7 +30,7 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 
 ### Optional
 	-d, --draco [true / false, default: false] [not required]
-	-s, --seperate [true / false, default: false] [not required]
+	-s, --seperateTextures [true / false, default: false] [not required]
 
 ## Licence
 
