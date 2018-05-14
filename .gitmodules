@@ -1,9 +1,6 @@
 [submodule "submodules/glTF-Sample-Models"]
 	path = submodules/glTF-Sample-Models
 	url = git@github.com:KhronosGroup/glTF-Sample-Models.git
-[submodule "submodules/texture-compressor"]
-	path = submodules/texture-compressor
-	url = git@github.com:TimvanScherpenzeel/texture-compressor.git
 [submodule "submodules/gltf-pipeline"]
 	path = submodules/gltf-pipeline
 	url = git@github.com:AnalyticalGraphicsInc/gltf-pipeline.git
