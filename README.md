@@ -5,6 +5,8 @@
 
 CLI tool for packing glTF to GLB.
 
+`gltf-to-glb` extends the functionality of [gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/tree/2.0).
+
 ## Installation
 
 ```sh
