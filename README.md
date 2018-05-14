@@ -1,11 +1,9 @@
-# Asset pipeline
+# Gltf-to-glb
 
-[![dependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline)
-[![devDependencies](https://david-dm.org/timvanscherpenzeel/asset-pipeline/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/asset-pipeline#info=devDependencies)
+[![dependencies](https://david-dm.org/timvanscherpenzeel/gltf-to-glb.svg)](https://david-dm.org/timvanscherpenzeel/gltf-to-glb)
+[![devDependencies](https://david-dm.org/timvanscherpenzeel/gltf-to-glb/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/gltf-to-glb#info=devDependencies)
 
-CLI tool for packing various assets efficiently for use in production.
-
-Initially focused on setting up a proper `glTF` to `glb` workflow including `Draco` compression and texture compression using `texture-compressor`. `Asset-pipeline` will hopefully be a toolkit that can help you with packing all kinds of data effectively for use in production environments.
+CLI tool for packing glTF to glb.
 
 ## Installation
 
@@ -22,7 +20,7 @@ $ npm --prefix ./submodules/texture-compressor install ./submodules/texture-comp
 ## Example
 
 ```sh
-$ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
+$ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
 ```
 
 ## Flags
@@ -37,4 +35,4 @@ $ node bin/asset-pipeline.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelme
 
 ## Licence
 
-My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/asset-pipeline/master/LICENSE).
+My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/gltf-to-glb/master/LICENSE).

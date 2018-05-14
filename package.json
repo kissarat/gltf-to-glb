@@ -1,7 +1,7 @@
 {
-  "name": "asset-pipeline",
+  "name": "gltf-to-glb",
   "version": "0.0.1",
-  "description": "CLI tool for packing various assets efficiently for use in production.",
+  "description": "CLI tool for packing glTF to glb.",
   "main": "index.js",
   "scripts": {
     "start": "http-server --cors -s -o",
@@ -9,7 +9,7 @@
     "deploy": "npm version patch && npm publish && git push origin"
   },
   "bin": {
-    "asset-pipeline": "./bin/asset-pipeline.js"
+    "gltf-to-glb": "./bin/gltf-to-glb.js"
   },
   "author": "Tim van Scherpenzeel",
   "license": "MIT",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TimvanScherpenzeel/asset-pipeline.git"
+    "url": "git+https://github.com/TimvanScherpenzeel/gltf-to-glb.git"
   },
   "bugs": {
-    "url": "https://github.com/TimvanScherpenzeel/asset-pipeline/issues"
+    "url": "https://github.com/TimvanScherpenzeel/gltf-to-glb/issues"
   },
-  "homepage": "https://github.com/TimvanScherpenzeel/asset-pipeline#readme"
+  "homepage": "https://github.com/TimvanScherpenzeel/gltf-to-glb#readme"
 }
