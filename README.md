@@ -34,6 +34,10 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 	-d, --draco [true / false, default: false] [not required]
 	-s, --seperateTextures [true / false, default: false] [not required]
 
+## Resources
+
+[glTF 2.0 specification](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0)
+
 ## Licence
 
 My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/gltf-to-glb/master/LICENSE).
