@@ -3,7 +3,7 @@
 [![dependencies](https://david-dm.org/timvanscherpenzeel/gltf-to-glb.svg)](https://david-dm.org/timvanscherpenzeel/gltf-to-glb)
 [![devDependencies](https://david-dm.org/timvanscherpenzeel/gltf-to-glb/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/gltf-to-glb#info=devDependencies)
 
-CLI tool for packing glTF to glb.
+CLI tool for packing glTF to GLB.
 
 ## Installation
 
