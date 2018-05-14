@@ -14,7 +14,6 @@ $ git submodule init
 $ git submodule update
 
 $ npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
-$ npm --prefix ./submodules/texture-compressor install ./submodules/texture-compressor
 ```
 
 ## Example
