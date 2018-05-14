@@ -16,6 +16,8 @@ $ git submodule init
 $ git submodule update
 
 $ npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
+
+$ git submodule update --recursive --remote --force
 ```
 
 ## Example
