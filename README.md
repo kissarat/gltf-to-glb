@@ -28,6 +28,10 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 	-i, --input [example: ./input/example.gltf] [required]
 	-o, --output [example: ./output/example.glb] [required]
 
+### Optional
+	-d, --draco [true / false, default: false] [not required]
+	-s, --seperate [true / false, default: false] [not required]
+
 ## Licence
 
 My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/gltf-to-glb/master/LICENSE).
