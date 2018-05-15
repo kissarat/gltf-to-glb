@@ -7,7 +7,7 @@ CLI tool for packing glTF to GLB.
 
 `gltf-to-glb` extends the functionality of [gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/tree/2.0) by adding hooks for preprocessing of `glTF` files and postprocessing of `GLB` files allowing you to more easily plug in certain transformations and optimisations without having to modify the library.
 
-Please note that until further notice `gltf-to-glb` uses the `2.0` branch of [gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/tree/2.0) which is currently in active development and has not yet been stabalized.
+Please note that until further notice `gltf-to-glb` uses the `2.0` branch of [gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/tree/2.0) which is currently in active development and has not yet been stabilized.
 
 ## Installation
 
