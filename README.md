@@ -45,6 +45,7 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 - [glTF 2.0 specification](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0)
 - [Blender glTF 2.0 exporter](https://github.com/KhronosGroup/glTF-Blender-Exporter)
 - [Drag-and-drop glTF 2.0 WebGL viewer using Three.js](https://github.com/donmccurdy/three-gltf-viewer)
+- [Optimizing GLTF files as exported by Blender](https://gist.github.com/mattdesl/aea40285e2d73916b6b9101b36d84da8)
 
 ## Licence
 
