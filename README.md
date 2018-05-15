@@ -35,8 +35,8 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 ### Optional
 	-d, --draco [true / false, default: false] [not required]
 	-s, --seperateTextures [true / false, default: false] [not required]
-	-pre, --preProcess [example: ./lib/plugins/examplePreProcess.js] [not required]
-	-post, --postProcess [example ./lib/plugins/examplePostProcess.js] [not required]
+	-pre, --preProcess [example: ./plugins/examplePreProcess.js] [not required]
+	-post, --postProcess [example ./plugins/examplePostProcess.js] [not required]
 
 ## Resources
 
