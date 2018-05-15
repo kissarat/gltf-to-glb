@@ -5,6 +5,6 @@ module.exports = (result) => {
 
 	return {
 		glb: data.glb,
-		externalResources: data.externalResources,
+		separateResources: data.separateResources,
 	};
 };
