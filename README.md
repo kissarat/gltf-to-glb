@@ -47,6 +47,8 @@ Please note that until further notice `gltf-to-glb` uses the `2.0` branch of [gl
 - [Blender glTF 2.0 exporter](https://github.com/KhronosGroup/glTF-Blender-Exporter)
 - [Drag-and-drop glTF 2.0 WebGL viewer using Three.js](https://github.com/donmccurdy/three-gltf-viewer)
 - [Optimizing GLTF files as exported by Blender](https://gist.github.com/mattdesl/aea40285e2d73916b6b9101b36d84da8)
+- [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF)
+- [COLLADA2GLTF build instructions for MacOS](https://gist.github.com/TimvanScherpenzeel/457b699a38890539fc659805ca9812e2)
 
 ## Licence
 
