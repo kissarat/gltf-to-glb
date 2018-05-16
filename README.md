@@ -12,20 +12,20 @@ Please note that until further notice `gltf-to-glb` uses the `2.0` branch of [gl
 ## Installation
 
 ```sh
-	npm install
+npm install
 
-	git submodule init
-	git submodule update
+git submodule init
+git submodule update
 
-	npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
+npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
 
-	git submodule update --recursive --remote --force
+git submodule update --recursive --remote --force
 ```
 
 ## Example
 
 ```sh
-	node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
+node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
 ```
 
 ## Flags
