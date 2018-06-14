@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server --cors -s -o",
-    "lint": "eslint lib/**/*.js",
+    "lint": "eslint './lib/**/*.js' --ignore-pattern '!.eslintrc.js' .eslintrc.js",
     "deploy": "npm version patch && npm publish && git push origin"
   },
   "bin": {
@@ -20,7 +20,8 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "prettier-eslint": "^8.8.1"
   },
   "repository": {
     "type": "git",
