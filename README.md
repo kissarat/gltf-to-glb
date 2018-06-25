@@ -51,7 +51,7 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 - [Optimizing GLTF files as exported by Blender](https://gist.github.com/mattdesl/aea40285e2d73916b6b9101b36d84da8)
 - [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF)
 - [COLLADA2GLTF build instructions for MacOS](https://gist.github.com/TimvanScherpenzeel/457b699a38890539fc659805ca9812e2)
-- [Creating ‘Qalam’ (GLB, Draco, Base64 + GZip / MIME type trickery, loading strategies, web workers and transferable objects) by Matt Greenhalgh, Stink Studios](https://medium.com/@stinkstudios/creating-qalam-d016a0a52d56)
+- [Creating ‘Qalam’ (Shared geometry, GLB, Draco compression, Base64 + GZip / MIME type trickery, loading strategies, web workers and transferable objects) by Matt Greenhalgh, Stink Studios](https://medium.com/@stinkstudios/creating-qalam-d016a0a52d56)
 
 ## Licence
 
