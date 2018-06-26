@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Draco decoder</title>
+	<title>glTF to GLB</title>
 
 	<style>
 		html,
@@ -32,17 +32,22 @@
 		// https://threejs.org/examples/webgl_materials_envmaps_hdr.html
 		// https://threejs.org/examples/webgl_loader_gltf.html
 
+		var draco = false;
+
 		var container, stats, controls;
 		var camera, scene, renderer, light;
 		var dracoLoader, gltfLoader;
 		var hdrCubeRenderTarget;
 		var gltfModel;
 
-		// Decoder
-		THREE.DRACOLoader.setDecoderPath("./viewer/decoders/");
-		dracoLoader = new THREE.DRACOLoader();
 		gltfLoader = new THREE.GLTFLoader();
-		gltfLoader.setDRACOLoader(dracoLoader);
+
+		// Decoder
+		if (draco) {
+			THREE.DRACOLoader.setDecoderPath("./viewer/decoders/");
+			dracoLoader = new THREE.DRACOLoader();
+			gltfLoader.setDRACOLoader(dracoLoader);
+		}
 
 		init();
 		animate();
@@ -98,7 +103,7 @@
 			});
 
 			// Mesh
-			gltfLoader.load('./viewer/assets/model/DamagedHelmet_draco.glb', function (gltf) {
+			gltfLoader.load(draco ? './viewer/assets/model/DamagedHelmet_draco.glb' : './viewer/assets/model/DamagedHelmet.glb', function (gltf) {
 				gltfModel = gltf;
 				scene.add(gltf.scene);
 			});
