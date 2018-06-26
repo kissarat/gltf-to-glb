@@ -26,7 +26,7 @@ $ git submodule update --recursive --remote --force
 
 [Live demo](https://timvanscherpenzeel.github.io/gltf-to-glb/)
 
-![Screenshot](viewer/assets/helmet.jpg?raw=true)
+![Screenshot](docs/viewer/assets/helmet.jpg?raw=true)
 
 ## Example
 
