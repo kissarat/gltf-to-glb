@@ -22,6 +22,12 @@ $ npm --prefix ./submodules/gltf-pipeline install ./submodules/gltf-pipeline
 $ git submodule update --recursive --remote --force
 ```
 
+## Live demo
+
+[Live demo](https://timvanscherpenzeel.github.io/gltf-to-glb/)
+
+![Screenshot](viewer/assets/helmet.jpg?raw=true)
+
 ## Example
 
 ```sh
@@ -31,14 +37,16 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 ## Flags
 
 ### Required
-	-i, --input [example: ./input/example.gltf] [required]
-	-o, --output [example: ./output/example.glb] [required]
+
+    -i, --input [example: ./input/example.gltf] [required]
+    -o, --output [example: ./output/example.glb] [required]
 
 ### Optional
-	-d, --draco [true / false, default: false] [not required]
-	-s, --seperateTextures [true / false, default: false] [not required]
-	-pre, --preProcess [example: ./plugins/examplePreProcess.js] [not required]
-	-post, --postProcess [example ./plugins/examplePostProcess.js] [not required]
+
+    -d, --draco [true / false, default: false] [not required]
+    -s, --seperateTextures [true / false, default: false] [not required]
+    -pre, --preProcess [example: ./plugins/examplePreProcess.js] [not required]
+    -post, --postProcess [example ./plugins/examplePostProcess.js] [not required]
 
 ## Resources
 
