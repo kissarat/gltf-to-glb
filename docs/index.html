@@ -64,6 +64,7 @@
 			renderer = new THREE.WebGLRenderer({ antialias: true });
 			renderer.setPixelRatio(window.devicePixelRatio);
 			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.toneMapping = THREE.Uncharted2ToneMapping;
 			renderer.gammaInput = true;
 			renderer.gammaOutput = true;
 			container.appendChild(renderer.domElement);
