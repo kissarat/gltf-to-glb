@@ -1,6 +1,6 @@
 {
   "name": "gltf-to-glb",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI tool for packing glTF to GLB.",
   "main": "index.js",
   "scripts": {
