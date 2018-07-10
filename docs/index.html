@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>glTF to GLB</title>
+
+	<style>
+		html,
+		body {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			min-height: 100%;
+		}
+
+		body {
+			background: black;
+			overflow: hidden;
+			position: fixed;
+		}
+	</style>
+
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/RGBELoader.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/HDRCubeTextureLoader.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/pmrem/PMREMCubeUVPacker.js"></script>
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/pmrem/PMREMGenerator.js"></script>
+
+	<script src="./viewer/loaders/DRACOLoader.js"></script>
+	<script src="./viewer/loaders/GLTFLoader.js"></script>
+</head>
+
+<body>
+	<script>
+		// https://threejs.org/examples/webgl_materials_envmaps_hdr.html
+		// https://threejs.org/examples/webgl_loader_gltf.html
+
+		var draco = false;
+
+		var container, stats, controls;
+		var camera, scene, renderer, light;
+		var dracoLoader, gltfLoader;
+		var hdrCubeRenderTarget;
+		var gltfModel;
+
+		gltfLoader = new THREE.GLTFLoader();
+
+		// Decoder
+		if (draco) {
+			THREE.DRACOLoader.setDecoderPath("./viewer/decoders/");
+			dracoLoader = new THREE.DRACOLoader();
+			gltfLoader.setDRACOLoader(dracoLoader);
+		}
+
+		init();
+		animate();
+
+		function init() {
+			// DOM
+			container = document.createElement('div');
+			document.body.appendChild(container);
+
+			// Camera
+			camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20);
+			camera.position.set(-1.8, 0.9, 2.7);
+
+			// Controls
+			controls = new THREE.OrbitControls(camera);
+			controls.target.set(0, -0.2, -0.2);
+			controls.update();
+
+			// Scene
+			scene = new THREE.Scene();
+
+			// Renderer
+			renderer = new THREE.WebGLRenderer({ antialias: true });
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.toneMapping = THREE.Uncharted2ToneMapping;
+			renderer.gammaInput = true;
+			renderer.gammaOutput = true;
+			container.appendChild(renderer.domElement);
+
+
+			// Light
+			light = new THREE.HemisphereLight(0xbbbbff, 0x444422);
+			light.position.set(0, 1, 0);
+			scene.add(light);
+
+			// HDR lighting
+			var genCubeUrls = function (prefix, postfix) {
+				return [
+					prefix + 'px' + postfix, prefix + 'nx' + postfix,
+					prefix + 'py' + postfix, prefix + 'ny' + postfix,
+					prefix + 'pz' + postfix, prefix + 'nz' + postfix
+				];
+			};
+
+			var hdrUrls = genCubeUrls('./viewer/assets/pisaHDR/', '.hdr');
+			hdrLoader = new THREE.HDRCubeTextureLoader().load(THREE.UnsignedByteType, hdrUrls, function (hdrCubeMap) {
+				var pmremGenerator = new THREE.PMREMGenerator(hdrCubeMap);
+				pmremGenerator.update(renderer);
+				var pmremCubeUVPacker = new THREE.PMREMCubeUVPacker(pmremGenerator.cubeLods);
+				pmremCubeUVPacker.update(renderer);
+				hdrCubeRenderTarget = pmremCubeUVPacker.CubeUVRenderTarget;
+			});
+
+			// Mesh
+			gltfLoader.load(draco ? './viewer/assets/model/DamagedHelmet_draco.glb' : './viewer/assets/model/DamagedHelmet.glb', function (gltf) {
+				gltfModel = gltf;
+				scene.add(gltf.scene);
+			});
+
+			// Events
+			window.addEventListener('resize', onWindowResize, false);
+		}
+
+		function onWindowResize() {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+		}
+
+		function animate() {
+			requestAnimationFrame(animate);
+
+			if (gltfModel && gltfModel.scene.children[0].material.envMap === null) {
+				gltfModel.scene.children[0].material.envMap = hdrCubeRenderTarget ? hdrCubeRenderTarget.texture : null;
+			}
+
+			renderer.render(scene, camera);
+		}
+	</script>
+</body>
+
+</html>
