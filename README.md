@@ -32,7 +32,7 @@ $ git submodule update --recursive --remote --force
 
 Before adding further optimizations like Draco and ZLib compression you have to ask yourself: does it make sense in my context? At what point does it start making sense to use these type of optimizations?
 
-I would say: only when you are dealing with a lot of geometry and a lot of models in your scene. Only then the upfront cost of the inflating, the Draco decoder and decompression will make up for itself. When you have a single model like in the [live demo](https://timvanscherpenzeel.github.io/gltf-to-glb/) it is likely not worth it.
+I would say: only when you are dealing with a lot of geometry and a lot of models in your scene. Only then the upfront cost of the ZLib inflating, the Draco decodeing and decompression will make up for itself. When you have a single model like in the [live demo](https://timvanscherpenzeel.github.io/gltf-to-glb/) it is likely not worth it. A use case as shown in the video [Draco 3D Geometry Compression: Comparing Draco to gzip](https://www.youtube.com/watch?v=6sOgrBWjkcQ) by `Google Open Source` shows a usecase where it clearly is worth it.
 
 Please note that textures don't compress well so the cost of ZLib inflating is only really worth it if your model is geometry heavy.
 
