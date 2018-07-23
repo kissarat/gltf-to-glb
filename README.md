@@ -30,8 +30,22 @@ $ git submodule update --recursive --remote --force
 
 ## Example
 
+`glTF to glb`
+
 ```sh
 $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
+```
+
+`glTF to glb using Draco compression`
+
+```sh
+$ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet_draco_zlib.glb -d
+```
+
+`glTF to glb using Draco compression and ZLib postprocess compression`
+
+```sh
+$ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet_draco_zlib.glb -post ./plugins/ZLibDeflatePostProcess.js -d
 ```
 
 ## Flags
