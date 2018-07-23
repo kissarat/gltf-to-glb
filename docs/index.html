@@ -41,6 +41,7 @@
 		// https://threejs.org/examples/webgl_loader_gltf.html
 
 		var draco = false;
+		var zlib = true;
 
 		var container, stats, controls;
 		var camera, scene, renderer, light;
@@ -139,25 +140,33 @@
 			};
 
 			// ZLib inflate
-			fileLoader(draco ? './viewer/assets/model/DamagedHelmet_draco_zlib.glb' : './viewer/assets/model/DamagedHelmet_zlib.glb', 'arraybuffer')
-				.then(data => {
-					try {
-						const inflatedGlb = new pako.inflate(data).buffer;
-						const inflatedGlbBlob = new Blob([new Uint8Array(inflatedGlb)], {
-							type: 'model/gltf-binary',
-						});
-						const inflatedGlbBlobURL = URL.createObjectURL(inflatedGlbBlob);
+			if (zlib) {
+				fileLoader(draco ? './viewer/assets/model/DamagedHelmet_draco_zlib.glb' : './viewer/assets/model/DamagedHelmet_zlib.glb', 'arraybuffer')
+					.then(data => {
+						try {
+							const inflatedGlb = new pako.inflate(data).buffer;
+							const inflatedGlbBlob = new Blob([new Uint8Array(inflatedGlb)], {
+								type: 'model/gltf-binary',
+							});
+							const inflatedGlbBlobURL = URL.createObjectURL(inflatedGlbBlob);
 
-						// Mesh
-						gltfLoader.load(inflatedGlbBlobURL, function (gltf) {
-							gltfModel = gltf;
-							scene.add(gltf.scene);
-						});
-					} catch (err) {
-						console.error(err);
-					}
-				})
-				.catch(error => console.error(error));
+							// Mesh
+							gltfLoader.load(inflatedGlbBlobURL, function (gltf) {
+								gltfModel = gltf;
+								scene.add(gltf.scene);
+							});
+						} catch (err) {
+							console.error(err);
+						}
+					})
+					.catch(error => console.error(error));
+			} else {
+				// Mesh
+				gltfLoader.load(draco ? './viewer/assets/model/DamagedHelmet_draco.glb' : './viewer/assets/model/DamagedHelmet.glb', function (gltf) {
+					gltfModel = gltf;
+					scene.add(gltf.scene);
+				});
+			}
 
 
 			// Events
