@@ -72,6 +72,7 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 - [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF)
 - [COLLADA2GLTF build instructions for MacOS](https://gist.github.com/TimvanScherpenzeel/457b699a38890539fc659805ca9812e2)
 - [Creating ‘Qalam’ (Shared geometry, GLB, Draco compression, Base64 + GZip / MIME type trickery, loading strategies, web workers and transferable objects) by Matt Greenhalgh, Stink Studios](https://medium.com/@stinkstudios/creating-qalam-d016a0a52d56)
+- [Helix.js uses ZLib inflate / deflate for binary FBX deserialization](https://github.com/DerSchmale/helixjs/blob/a5625182674cb1d1ba5c2f53cd89a6654b423915/src/helix-io/fbx/FBXBinaryDeserializer.js)
 
 ## Licence
 
