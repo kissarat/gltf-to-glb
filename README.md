@@ -24,8 +24,7 @@ $ git submodule update --recursive --remote --force
 
 ## Live demo
 
-[Live demo](https://timvanscherpenzeel.github.io/gltf-to-glb/) of a Draco compressed glTF file rendered in [Three.js](https://github.com/mrdoob/three.js) using HDR Image-based Lighting
-using run-time generated pre-filtered roughness mipmaps.
+[Live demo](https://timvanscherpenzeel.github.io/gltf-to-glb/) of a Draco compressed glTF file rendered in [Three.js](https://github.com/mrdoob/three.js) using HDR Image-based Lighting with run-time generated pre-filtered roughness mipmaps.
 
 ![Screenshot](docs/viewer/assets/helmet.jpg?raw=true)
 
