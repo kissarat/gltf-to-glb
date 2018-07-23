@@ -30,6 +30,7 @@
 	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/pmrem/PMREMCubeUVPacker.js"></script>
 	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/pmrem/PMREMGenerator.js"></script>
 
+	<script src="./viewer/vendor/pako_inflate.min.js"></script>
 	<script src="./viewer/loaders/DRACOLoader.js"></script>
 	<script src="./viewer/loaders/GLTFLoader.js"></script>
 </head>
@@ -109,11 +110,55 @@
 				hdrCubeRenderTarget = pmremCubeUVPacker.CubeUVRenderTarget;
 			});
 
-			// Mesh
-			gltfLoader.load(draco ? './viewer/assets/model/DamagedHelmet_draco.glb' : './viewer/assets/model/DamagedHelmet.glb', function (gltf) {
-				gltfModel = gltf;
-				scene.add(gltf.scene);
-			});
+			function fileLoader(url, responseType) {
+				return new Promise((resolve, reject) => {
+					const request = new XMLHttpRequest();
+
+					request.responseType = responseType || '';
+					request.onreadystatechange = () => {
+						if (request.readyState !== 4) return;
+
+						if (request.readyState === 4 && request.status === 200) {
+							resolve(request.response, request.status);
+						} else {
+							reject(request.status);
+						}
+					};
+
+					request.open('GET', url, true);
+					request.send();
+				});
+			}
+
+			const convertUint8ArrayToString = array => {
+				let str = '';
+
+				array.map(item => (str += String.fromCharCode(item)));
+
+				return str;
+			};
+
+			// ZLib inflate
+			fileLoader(draco ? './viewer/assets/model/DamagedHelmet_draco_zlib.glb' : './viewer/assets/model/DamagedHelmet_zlib.glb', 'arraybuffer')
+				.then(data => {
+					try {
+						const inflatedGlb = new pako.inflate(data).buffer;
+						const inflatedGlbBlob = new Blob([new Uint8Array(inflatedGlb)], {
+							type: 'model/gltf-binary',
+						});
+						const inflatedGlbBlobURL = URL.createObjectURL(inflatedGlbBlob);
+
+						// Mesh
+						gltfLoader.load(inflatedGlbBlobURL, function (gltf) {
+							gltfModel = gltf;
+							scene.add(gltf.scene);
+						});
+					} catch (err) {
+						console.error(err);
+					}
+				})
+				.catch(error => console.error(error));
+
 
 			// Events
 			window.addEventListener('resize', onWindowResize, false);
