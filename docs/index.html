@@ -140,6 +140,7 @@
 			};
 
 			// ZLib inflate
+			// Could possibly be moved to a seperate worker, see https://github.com/TimvanScherpenzeel/binpacker-loader/blob/master/src/loader.worker.js
 			if (zlib) {
 				fileLoader(draco ? './viewer/assets/model/DamagedHelmet_draco_zlib.glb' : './viewer/assets/model/DamagedHelmet_zlib.glb', 'arraybuffer')
 					.then(data => {
