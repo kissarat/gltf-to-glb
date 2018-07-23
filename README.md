@@ -30,19 +30,19 @@ $ git submodule update --recursive --remote --force
 
 ## Example
 
-`glTF to glb` ~ 4.8M (gltf embedded) > 3.6M (glb)
+`glTF to glb` ~ 4.8M (gltf embedded) > 3.6M (glb, requires no decompression)
 
 ```sh
 $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet.glb
 ```
 
-`glTF to glb using Draco compression` ~ 4.8M (gltf embedded) > 3.1M (glb)
+`glTF to glb using Draco compression` ~ 4.8M (gltf embedded) > 3.1M (glb, requires Draco decompression)
 
 ```sh
 $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet_draco_zlib.glb -d
 ```
 
-`glTF to glb using Draco compression and ZLib postprocess compression` ~ 4.8M (gltf embedded) > 3.0M (glb)
+`glTF to glb using Draco compression and ZLib postprocess compression` ~ 4.8M (gltf embedded) > 3.0M (glb, requires ZLib inflating and Draco decompression)
 
 ```sh
 $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet_draco_zlib.glb -post ./plugins/ZLibDeflatePostProcess.js -d
