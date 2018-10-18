@@ -3,7 +3,7 @@
 [![dependencies](https://david-dm.org/timvanscherpenzeel/gltf-to-glb.svg)](https://david-dm.org/timvanscherpenzeel/gltf-to-glb)
 [![devDependencies](https://david-dm.org/timvanscherpenzeel/gltf-to-glb/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/gltf-to-glb#info=devDependencies)
 
-CLI tool for packing glTF to GLB.
+CLI tool for converting glTF to GLB.
 
 `gltf-to-glb` extends the functionality of [gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline/tree/2.0) by adding hooks for preprocessing of `glTF` files and postprocessing of `GLB` files allowing you to more easily plug in certain transformations and optimisations without having to modify the core library. It also makes sure to validate your `glTF` file using [gltf-validator](https://github.com/KhronosGroup/glTF-Validator) to flag any potential issues before processing.
 
