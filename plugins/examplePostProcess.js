@@ -1,10 +1,10 @@
 module.exports = (result) => {
-	const data = result;
+  const data = result;
 
-	console.log(data);
+  console.log(data);
 
-	return {
-		glb: data.glb,
-		separateResources: data.separateResources,
-	};
+  return {
+    glb: data.glb,
+    separateResources: data.separateResources,
+  };
 };

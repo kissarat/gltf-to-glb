@@ -1,7 +1,7 @@
 module.exports = (gltf) => {
-	const data = gltf;
+  const data = gltf;
 
-	console.log(data);
+  console.log(data);
 
-	return data;
+  return data;
 };
