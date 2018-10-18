@@ -1,3 +1,7 @@
 [submodule "submodules/glTF-Sample-Models"]
 	path = submodules/glTF-Sample-Models
 	url = git@github.com:KhronosGroup/glTF-Sample-Models.git
+[submodule "submodules/gltf-pipeline"]
+	path = submodules/gltf-pipeline
+	url = git@github.com:AnalyticalGraphicsInc/gltf-pipeline.git
+	branch = master
