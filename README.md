@@ -43,7 +43,7 @@ $ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/g
 `glTF to glb using Draco compression` ~ 4.8M (gltf embedded) > 3.1M (glb, requires Draco decompression)
 
 ```sh
-$ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet_draco_zlib.glb -d
+$ node bin/gltf-to-glb.js -i ./submodules/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf -o ./output/DamagedHelmet_draco.glb -d
 ```
 
 `glTF to glb using Draco compression and ZLib postprocess compression` ~ 4.8M (gltf embedded) > 3.0M (glb, requires ZLib inflating and Draco decompression)
